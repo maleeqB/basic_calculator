@@ -1,3 +1,4 @@
+#function to perform arithmetic operations
 def addition(x,y):
     return x + y
 def subtraction(x,y):
@@ -8,7 +9,7 @@ def division(x,y):
     return x/y
 
 
-
+#function to get input from user
 def prompt_user_input():
     x = 0.0
     y = 0.0
@@ -27,11 +28,14 @@ def prompt_user_input():
         break
     return x, y, operator
 
+
+#function to display result
 def print_result(x,y,operator,result):
     print("The result of the operation is: %.2f %s %.2f == %.2f" %(x, operator, y, result))
 
 
 
+#function to prompt the user for input and perform calculations until the user chooses to exit
 def calculator():
     while True:
         x, y, operator = prompt_user_input()
@@ -42,6 +46,7 @@ def calculator():
         elif(operator == "-"):
             result = subtraction(x,y)
         elif(operator == "/"):
+            #prevent the user from dividing by zero
             if(y ==0):
                 print("Cannot divide by 0")
                 continue
