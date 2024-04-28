@@ -60,4 +60,5 @@ def calculator():
         if(y.lower() == "n"):
             break
 
-
+if __name__ == "__main__":
+    calculator()
