@@ -31,3 +31,28 @@ def print_result(x,y,operator,result):
     print("The result of the operation is: %.2f %s %.2f == %.2f" %(x, operator, y, result))
 
 
+
+def calculator():
+    while True:
+        x, y, operator = prompt_user_input()
+        result = 0.0
+
+        if(operator == "+"):
+            result = addition(x,y)
+        elif(operator == "-"):
+            result = subtraction(x,y)
+        elif(operator == "/"):
+            if(y ==0):
+                print("Cannot divide by 0")
+                continue
+            result = division(x,y)
+        elif(operator == "*"):
+            result = multiplication(x,y)
+
+        print_result(x,y,operator, result)
+
+        y = input("Do you want to continue? [y/n]: ")
+        if(y.lower() == "n"):
+            break
+
+
