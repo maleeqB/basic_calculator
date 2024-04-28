@@ -16,3 +16,7 @@ def prompt_user_input():
         break
     return x, y, operator
 
+def print_result(x,y,operator,result):
+    print("The result of the operation is: %.2f %s %.2f == %.2f" %(x, operator, y, result))
+
+
